@@ -10,15 +10,25 @@ public class FakeDao extends Exception implements IStorageTasks{
 
         Task ouioui = new Task("Ouioui","ouioui fake",1,true);
 
-        Task non = new Task("non","non fake",12,true);
+        Task non = new Task("non","non fake",3,true);
 
         taskList.AddTask(test);
         taskList.AddTask(ouioui);
-        taskList.AddTask(non);
+        //taskList.AddTask(non);
     }
 
     @Override
     public TaskList ReadTasks() {
         return taskList;
+    }
+
+    @Override
+    public void AddTask(Task task) {
+
+    }
+
+    @Override
+    public void UpdateTask(Task task) {
+
     }
 }

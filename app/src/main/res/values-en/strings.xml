@@ -5,4 +5,11 @@
     <string name="PasDeTri">without sort</string>
     <string name="TriParTitre">sort by title</string>
     <string name="TriParImportance">sort by importance</string>
+    <string name="Retour">Back</string>
+    <string name="EditerUneTache">Edit task</string>
+    <string name="Titre">Title</string>
+    <string name="Description">Description</string>
+    <string name="Importance">Importance</string>
+    <string name="EntrerDuText">Enter text</string>
+    <string name="Ajouter">Add</string>
 </resources>

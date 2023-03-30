@@ -1,6 +1,8 @@
 package com.rb.tp1.logic;
 
-public class Task extends Exception{
+import java.io.Serializable;
+
+public class Task extends Exception implements Serializable {
     private String title;
 
     private String description;
@@ -45,10 +47,10 @@ public class Task extends Exception{
     }
 
     public void setPriority(int priority) throws Exception {
-        if(priority < 1 && priority > 4){
+        if(priority >= 1 && priority <= 4){
             this.priority = priority;
         }else{
-            throw new Exception("priority not valide must be >0nd <5");
+            throw new Exception("priority not valide must be >0 and <5");
         }
 
     }

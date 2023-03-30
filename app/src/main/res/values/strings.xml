@@ -4,4 +4,11 @@
     <string name="PasDeTri">pas de tri</string>
     <string name="TriParTitre">tri par titre</string>
     <string name="TriParImportance">tri par importance</string>
+    <string name="Retour">Retour</string>
+    <string name="EditerUneTache">Editer une tâche</string>
+    <string name="Titre">Titre</string>
+    <string name="Description">Description</string>
+    <string name="Importance">Importance</string>
+    <string name="EntrerDuText">Entrer Du Text</string>
+    <string name="Ajouter">Ajouter</string>
 </resources>
