@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tp1</string>
+    <string name="ToDo">Task to do</string>
+    <string name="PasDeTri">without sort</string>
+    <string name="TriParTitre">sort by title</string>
+    <string name="TriParImportance">sort by importance</string>
+</resources>
