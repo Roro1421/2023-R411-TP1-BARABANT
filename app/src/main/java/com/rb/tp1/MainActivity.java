@@ -7,6 +7,7 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.rb.tp1.logic.Exception;
 import com.rb.tp1.logic.FakeDao;
 import com.rb.tp1.logic.IStorageTasks;
 import com.rb.tp1.logic.Task;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private FakeDao Dao = new FakeDao();
 
     private ArrayAdapter<Task> adapter;
+
+    public MainActivity() throws Exception {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,6 @@
 package com.rb.tp1.logic;
 
-public class Task {
+public class Task extends Exception{
     private String title;
 
     private String description;
@@ -9,7 +9,8 @@ public class Task {
 
     private boolean completed;
 
-    public Task(String title, String description, int priority, boolean completed) {
+    public Task  (String title, String description, int priority, boolean completed) throws Exception {
+        super("raté");
         setTitle(title);
         setCompleted(completed);
         setDescription(description);
@@ -18,11 +19,16 @@ public class Task {
 
 
     public String getTitle() {
+
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitle(String title) throws Exception {
+        if (title != null && title != ""){
+            this.title = title;
+        }else{
+            throw new Exception("Titre vide");
+        }
     }
 
 
@@ -38,8 +44,13 @@ public class Task {
         return priority;
     }
 
-    public void setPriority(int priority) {
-        this.priority = priority;
+    public void setPriority(int priority) throws Exception {
+        if(priority < 1 && priority > 4){
+            this.priority = priority;
+        }else{
+            throw new Exception("priority not valide must be >0nd <5");
+        }
+
     }
 
     public boolean getCompleted() {
