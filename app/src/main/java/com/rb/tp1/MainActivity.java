@@ -3,6 +3,7 @@ package com.rb.tp1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import logic;
 
 public class MainActivity extends AppCompatActivity {
 
