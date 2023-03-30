@@ -1,4 +1,4 @@
-package logic;
+package com.rb.tp1.logic;
 
 public class Task {
     private String title;
@@ -8,6 +8,14 @@ public class Task {
     private int priority;
 
     private boolean completed;
+
+    public Task(String title, String description, int priority, boolean completed) {
+        setTitle(title);
+        setCompleted(completed);
+        setDescription(description);
+        setPriority(priority);
+    }
+
 
     public String getTitle() {
         return title;
@@ -42,4 +50,8 @@ public class Task {
         this.completed = completed;
     }
 
+    @Override
+    public String toString() {
+        return  title  + "   " +  priority ;
+    }
 }

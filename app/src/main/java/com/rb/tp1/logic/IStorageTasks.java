@@ -1,4 +1,4 @@
-package logic;
+package com.rb.tp1.logic;
 
 public interface IStorageTasks {
 
