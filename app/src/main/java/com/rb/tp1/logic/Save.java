@@ -26,10 +26,12 @@ public class Save implements IStorageTasks  {
     public Save(SharedPreferences share) throws Exception {
         this.sharedPreferences = share;
         this.ed = sharedPreferences.edit();
-        this.taskList = new TaskList();
         Gson gson = new Gson();
         String tmp = sharedPreferences.getString("tasks","");
         taskList = gson.fromJson(tmp, TaskList.class);
+        if (taskList == null){
+            taskList = new TaskList();
+        }
     }
 
     @Override
@@ -43,7 +45,7 @@ public class Save implements IStorageTasks  {
         this.taskList.AddTask(task);
         String str = gson.toJson(this.taskList);
         ed.putString("tasks",str);
-        ed.apply();;
+        ed.apply();
     }
 
     @Override

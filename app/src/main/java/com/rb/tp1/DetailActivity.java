@@ -63,7 +63,7 @@ public class DetailActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {

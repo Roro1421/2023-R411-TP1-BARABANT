@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -42,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
         this.listView = findViewById(R.id.listView);
 
         this.adapter = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, new ArrayList<Task>());
-        this.listView.setAdapter(adapter);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Prefs",MODE_PRIVATE);
 
         try {
-            this.save = new Save(this.getPreferences(0));
+            this.save = new Save(sharedPreferences);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -58,10 +60,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        for (Task task : this.Dao.ReadTasks().getTasks()) {
-            adapter.add(task);
-        }
-
+        this.listView.setAdapter(adapter);
 
         ListView listView = findViewById(R.id.listView);
 
@@ -103,4 +102,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 }
